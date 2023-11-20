@@ -3,6 +3,7 @@ const LIKES_MIN = 15;
 const LIKES_MAX = 200;
 const COMMENT_COUNT = 30;
 const AVATAR_COUNT = 6;
+
 const COMMENTS = [
   'Всё отлично!',
   'В целом всё неплохо. Но не всё.',
@@ -11,6 +12,7 @@ const COMMENTS = [
   'Я поскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.',
   'Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!'
 ];
+
 const DESCRIPTIONS = [
   'Встретились с друзьями',
   'Любимая работа',
@@ -22,6 +24,7 @@ const DESCRIPTIONS = [
   'Интересно, и почему же мы любим спать?',
   'Мой кот'
 ];
+
 const NAMES = [
   'Иван',
   'Хуан Себастьян',
@@ -67,7 +70,7 @@ const createComment = () => ({
 const createPhoto = () => ({
   id: generatePhotoId(),
   url: `photos/${getRandomInteger(1, PHOTO_COUNT)}.jpg`,
-  likes: getRandomInteger(LIKE_MIN, LIKE_MAX),
+  likes: getRandomInteger(LIKES_MIN, LIKES_MAX),
   description: getRandomArrayElement(DESCRIPTIONS),
   comments: Array.from(
     {length: getRandomInteger(0, COMMENT_COUNT)},
