@@ -2,6 +2,7 @@ function checkStringLength (string, symbols) {
   return string.length <= symbols;
 }
 
+
 checkStringLength ('проверяемая строка', 20);
 checkStringLength ('проверяемая строка', 18);
 checkStringLength ('проверяемая строка', 10);
